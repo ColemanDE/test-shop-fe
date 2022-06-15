@@ -5,8 +5,7 @@ import MainLayout from '../layouts/Main';
 import {apiClient} from '../lib/api';
 import {makeAllMenus} from '../lib/menu';
 import {IMenuItem} from '../@types/components';
-import bgImg from '../assets/cover-bg.jpeg';
-import bgPortraitImg from '../assets/cover-bg-portrait.jpg';
+import starryNight from '../assets/Van_Gogh_-_Starry_Night_-_Google_Art_Project.jpeg';
 import CoverTextInCenter from '../components/CoverTextInCenter';
 import ProductsSliderByQuery from '../components/ProductsSliderByQuery';
 
@@ -15,18 +14,18 @@ export default function IndexPage({products, mainMenu, footerMenu}: InferGetServ
 		<MainLayout mainMenu={mainMenu} footerMenu={footerMenu} classes={{layoutMain: 'pt-0'}}>
 			<CoverTextInCenter
 				showChevronDown
-				img={bgImg.src}
-				imgPortrait={bgPortraitImg.src}
+				img={starryNight.src}
+				imgPortrait={starryNight.src}
 				content={{
-					intro: 'Muhammad Ali',
-					head: 'Impossible is nothing!',
-					subHead: 'Impossible is not a fact. It’s an opinion. Impossible is not a declaration. It’s a dare. Impossible is potential. Impossible is temporary.'
+					intro: 'Vincent Van Gogh', // Here we can change the content. 
+					head: 'Courage',
+					subHead: 'What would life be if we had no courage to attempt anything?'
 				}}
 				shadow={{
 					opacity: 0.5,
 					backgroundColor: '#000'
 				}}
-				link={'https://google.com'}
+				link={'/bio'}
 			/>
 			<div className='container'>
 				<h1 className='page-heading page-heading_h1  page-heading_m-h1'>Boundless store</h1>
